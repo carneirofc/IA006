@@ -77,23 +77,33 @@ if __name__ == '__main__':
     # 1981 -> 1988
     date_max = datetime.datetime(1990,1,1)
     df_test = df_data.loc[df_data.Date >= date_max]
-    #df_train = df_data.loc[df_data.Date < date_max]
-    #for year in range(1,10):
-    for year in range(1,2):
-        df_train = df_data.loc[(df_data.Date < date_max)&(df_data.Date >= datetime.datetime(1980+year,1,1))]
+    df_train = df_data.loc[df_data.Date < date_max]
 
-        estimators = []
-        #print('---------------------------')
+    folds = 10
+    percent = 0.8
+
+    estimators = []
+    with open('ex01.csv', 'w+') as f:
+        f.write('"k","avg","var","min","max"\n')
         for k in range(1,31):
+            print('Fold {} ...'.format(k))
             train_inp, train_resp = getInpRes(df_train['Temp'].values, k)
             test_inp, test_resp = getInpRes(df_test['Temp'].values, k)
 
-            w_optimum, folds_detail = getBestFold(50, 0.8, train_inp, train_resp)
+            w_optimum, folds_detail = getBestFold(folds, percent, train_inp, train_resp)
             rm = evalModel(w_optimum, test_inp, test_resp)
             det = {'k':len(w_optimum)-1,'avg':np.mean(rm), 'var':np.var(rm), 'min':np.amin(rm), 'max':np.max(rm), 'w':w_optimum, 'fold_det':folds_detail}
-            #print(det['k'],det['avg'],det['var'])
             estimators.append(det)
+            f.write('{},{},{},{},{}\n'.format(det['k'],det['avg'],det['var'],det['min'],det['max']))
 
-        da_best = min(estimators, key=lambda x:x['avg'])
-        #print('---------------------------')
-        print('{} to 1989'.format(1980+year), da_best['k'], da_best['avg'],da_best['var'])
+    da_best = min(estimators, key=lambda x:x['avg'])
+    print(da_best['k'], da_best['avg'], da_best['var'])
+    with open('ex01_da_best.csv', 'w+') as f:
+        f.write('"Real","Est","Error"\n')
+        test_inp, test_resp = getInpRes(df_test['Temp'].values, da_best['k'])
+        y_est = test_inp.dot(da_best['w'])
+        e = (test_resp - y_est)
+        for i in range(len(e)):
+            f.write('{},{},{}\n'.format(test_resp[i][0], y_est[i][0], e[i][0]))
+
+
