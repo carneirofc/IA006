@@ -48,6 +48,24 @@ def get_tanh_inp_res(data, k):
     return inp, res, w
 
 
+def Kfold(folds, train_inp, train_out):
+    _train_inp = []
+    _train_out = []
+
+    lenght = len(train_inp)
+    folds_num = lenght if (lenght%folds==0) else (lenght + 1)
+    folds_size = int(lenght/folds)
+    for k in range(folds):
+        val_start = folds_size*k
+        val_end = folds_size*(k+1) if folds_size<lenght else lenght
+
+        validation_inp = train_inp[val_start:val_end]
+        validation_out = train_out[val_start:val_end]
+
+        _train_inp.append( np.append(train_inp[0:val_start], train_inp[val_end:], axis = 0))
+        _train_out.append( np.append(train_out[0:val_start],train_out[val_end:], axis = 0))
+
+
 def get_inp_res(data, k):
     inp = np.zeros((len(data)-k, k+1))
     res = np.zeros((len(data)-k, 1))

@@ -1,14 +1,12 @@
 #!../venv/bin/python
-import tkinter
 import matplotlib
 import matplotlib.pyplot as plt
 import pandas
 import datetime
 import numpy as np
 from statistics import mean
-from utils import read_data, config_plt, shuffle, get_inp_res, norm_data
-
-
+from utils import read_data, config_plt, shuffle, get_inp_res, norm_data, Kfold
+    
 def get_best_fold(folds, percent, train_inp, train_out):
     '''
     return weights, details, folds_rms.index(min(folds_rms))
@@ -17,6 +15,7 @@ def get_best_fold(folds, percent, train_inp, train_out):
     folds_detail = []
     folds_rms = []
     folds_w = []
+    _train_inp, _train_out, _test_inp, _test_out = Kfold(folds, train_inp, train_out)
     split = int(len(train_inp)*percent)
     for fold in range(folds):
         s_train_inp, s_train_out = shuffle(train_inp, train_out)     # shuffle the bois
@@ -96,5 +95,3 @@ if __name__ == '__main__':
         e = (test_out - y_est)
         for i in range(len(e)):
             f.write('{},{},{}\n'.format(test_out[i][0], y_est[i][0], e[i][0]))
-
-
