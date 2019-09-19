@@ -1,33 +1,25 @@
 #!../venv/bin/python
-import matplotlib
-import matplotlib.pyplot as plt
 import pandas
 import datetime
 import numpy as np
-from statistics import mean
 from utils import read_data, config_plt, shuffle, get_inp_res, norm_data, Kfold
-    
-def get_best_fold(folds, percent, train_inp, train_out):
+
+#def eval_fold(folds, percent, train_inp, train_out):
+def eval_fold(_train_inp, _train_out, _test_inp, _test_out):
     '''
     return weights, details, folds_rms.index(min(folds_rms))
     '''
-    # print('Folding ...')
     folds_detail = []
     folds_rms = []
     folds_w = []
-    _train_inp, _train_out, _test_inp, _test_out = Kfold(folds, train_inp, train_out)
-    split = int(len(train_inp)*percent)
-    for fold in range(folds):
-        s_train_inp, s_train_out = shuffle(train_inp, train_out)     # shuffle the bois
-        w = get_weight(s_train_inp[0:split], s_train_out[0:split])     # train
-        rms = eval_model(w, s_train_inp[split:], s_train_out[split:])  # test
+    for s_train_inp, s_train_out, s_validation_inp, s_validation_out in zip(_train_inp, _train_out, _test_inp, _test_out):
+        w = get_weight(s_train_inp, s_train_out)                # train
+        rms = eval_model(w, s_validation_inp, s_validation_out) # test
         avg = np.mean(rms)
         folds_rms.append(avg)
         folds_detail.append({'var':np.var(rms),'avg':avg, 'min':np.amin(rms), 'max':np.amax(rms)})
         folds_w.append(w)
-    idx = folds_rms.index(min(folds_rms))
-    #print('Finish folding ({} folds)... Best fold:idx {}\t{}'.format(folds, idx, folds_detail[idx]))
-    return folds_w, folds_detail, idx
+    return folds_rms, folds_detail, folds_w#, idx
 
 def get_weight(fi, y):
     # p1 = (fi*fiT)-1
@@ -47,9 +39,7 @@ if __name__ == '__main__':
     df_data = read_data(fname='daily-minimum-temperatures.csv')
     df_data['Date'] = pandas.to_datetime(df_data['Date'])
     temp = df_data['Temp'].values
-    print('Dataset {} {}'.format(mean(temp), np.var(temp)))
-    #temp, m, std = norm_data(temp)
-    #df_data['Temp'] = temp
+    print('Dataset {} {}'.format(np.mean(temp), np.var(temp)))
 
     # Split dataset ...
     # >= 1990-01-01 Test
@@ -57,41 +47,44 @@ if __name__ == '__main__':
     date_max = datetime.datetime(1990,1,1)
     df_test = df_data.loc[df_data.Date >= date_max]
     df_train = df_data.loc[df_data.Date < date_max]
-
     folds = 10
-    percent = 0.8
 
-    estimators = []
-    with open('01info.txt', 'w+') as f:
+    with open('ex01/info.txt', 'w+') as f:
         f.write('Folds = {}\n)')
-        f.write('Test+Validation = {}%\n'.format(folds, percent*100))
 
-    with open('01delays.csv', 'w+') as f:
+    # Locate best K value
+    kfolds_info= []
+    with open('ex01/folds.csv', 'w+') as f:
         f.write('"k","avg","var","min","max"\n')
         for k in range(1,31):
-            print('K {} ...'.format(k))
             train_inp, train_out = get_inp_res(df_train['Temp'].values, k)
-            test_inp, test_out = get_inp_res(df_test['Temp'].values, k)
 
             # Fold and return the best weight (W)
-            w_optimum, folds_detail, idx = get_best_fold(folds, percent, train_inp, train_out)
-            w_optimum, folds_detail = w_optimum[idx], folds_detail[idx]
-
-            # Test the model using W
-            rm = eval_model(w_optimum, test_inp, test_out)
-            det = {'k':len(w_optimum)-1,'avg':np.mean(rm), 'var':np.var(rm), 'min':np.amin(rm), 'max':np.max(rm), 'w':w_optimum, 'fold_det':folds_detail}
-            estimators.append(det)
+            _train_inp, _train_out, _validation_inp, _validation_out = Kfold(folds, train_inp, train_out)
+            rms, folds_detail, folds_w = eval_fold(_train_inp, _train_out, _validation_inp, _validation_out)#, idx
+            print('K{} ... mean {}'.format(k,np.mean(rms)))
+            det = {'k':k,'avg':np.mean(rms), 'var':np.var(rms), 'min':np.amin(rms), 'max':np.max(rms)}
+            kfolds_info.append(det)
             f.write('{},{},{},{},{}\n'.format(det['k'], det['avg'], det['var'], det['min'], det['max']))
+    
+    # Using the best K, train and test a model using the entire training dataset
+    best_fold = min(kfolds_info, key=lambda x:x['avg'])
+    k = best_fold['k']
+    train_inp, train_out = get_inp_res(df_train['Temp'].values, k)
+    test_inp, test_out = get_inp_res(df_test['Temp'].values, k)
+    
+    w = get_weight(train_inp, train_out)
+    y_est = test_inp.dot(w)
+    e = (test_out - y_est)
+    erms = e * e
+    
+    print('Best fold: {}\nW {}'.format(best_fold, w))
 
-    # Locate the min avg(RMS) from K delays
-    da_best = min(estimators, key=lambda x:x['avg'])
-    print(da_best['k'], da_best['avg'], da_best['var'])
-    with open('01estimator.txt', 'w+') as f:
-        f.write('W =\n {}\n'.format(da_best['w']))
-    with open('01estimator.csv', 'w+') as f:
-        f.write('"Real","Est","Error"\n')
-        test_inp, test_out = get_inp_res(df_test['Temp'].values, da_best['k'])
-        y_est = test_inp.dot(da_best['w'])
-        e = (test_out - y_est)
+    with open('ex01/model.csv', 'w+') as f:
+        f.write('"y","ŷ","e","erms"\n')
         for i in range(len(e)):
-            f.write('{},{},{}\n'.format(test_out[i][0], y_est[i][0], e[i][0]))
+            f.write('{},{},{},{}\n'.format(test_out[i][0], y_est[i][0], e[i][0], erms[i][0]))
+
+    with open('ex01/model.txt', 'w+') as f:
+        f.write('Model={}\n'.format(best_fold))        
+        f.write('w={}\n'.format(w))        
