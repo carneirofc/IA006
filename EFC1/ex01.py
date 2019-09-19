@@ -35,7 +35,12 @@ def eval_model(w, test_inp, test_out):
     rm = (test_out - y_est)**2
     return rm
 
+import tkinter
+import matplotlib
+import matplotlib.pyplot as plt
+
 if __name__ == '__main__':
+    config_plt()
     df_data = read_data(fname='daily-minimum-temperatures.csv')
     df_data['Date'] = pandas.to_datetime(df_data['Date'])
     temp = df_data['Temp'].values
@@ -66,7 +71,17 @@ if __name__ == '__main__':
             det = {'k':k,'avg':np.mean(rms), 'var':np.var(rms), 'min':np.amin(rms), 'max':np.max(rms)}
             kfolds_info.append(det)
             f.write('{},{},{},{},{}\n'.format(det['k'], det['avg'], det['var'], det['min'], det['max']))
-    
+
+    # Plot RMSE per k delays
+    ks = [ e['k'] for e in kfolds_info]
+    avgs = [ e['avg'] for e in kfolds_info]
+    fig, ax = plt.subplots()
+    ax.set(xlabel='k delays', ylabel='RMSE', title='RMSE per k delays')
+    ax.plot(ks, avgs, label='Validation data')
+    ax.legend()
+    fig.savefig("ex01/folds.png")
+    plt.show()
+   
     # Using the best K, train and test a model using the entire training dataset
     best_fold = min(kfolds_info, key=lambda x:x['avg'])
     k = best_fold['k']
@@ -77,9 +92,24 @@ if __name__ == '__main__':
     y_est = test_inp.dot(w)
     e = (test_out - y_est)
     erms = e * e
-    
-    print('Best fold: {}\nW {}'.format(best_fold, w))
 
+    # Plot model
+    fig, ax = plt.subplots()
+    ax.set(xlabel='nth sample', ylabel='RMSE', title='Model test result')
+    ax.plot(erms, label='Test data') 
+    ax.legend()
+    fig.savefig("ex01/model.png")
+    plt.show()
+
+    fig, ax = plt.subplots()
+    ax.set(xlabel='nth sample', ylabel='ºC', title='Test result')
+    ax.plot(test_out, label='Expected') 
+    ax.plot(y_est, label='Estimated') 
+    ax.legend()
+    fig.savefig("ex01/model_comp.png")
+    plt.show()
+     
+    print('Best fold: {}\nW {}'.format(best_fold, w))
     with open('ex01/model.csv', 'w+') as f:
         f.write('"y","ŷ","e","erms"\n')
         for i in range(len(e)):
