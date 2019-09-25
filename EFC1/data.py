@@ -20,14 +20,14 @@ def ex2(data):
     lamb = [e['lamb_val'] for e in best_lambs]
 
     fig, ax = plt.subplots()
-    ax.set(xlabel='Quantidade de atributos', ylabel='RMSE', title='RMSE obtido (k-fold) dentre os parâmetros de\n regularização experimentados.')
-    ax.plot(Ts, avgs, label='RMSE, {}<=lambda<={}, passo {}'.format(lamb_ini, lamb_max, lamb_step))
+    ax.set(xlabel='Quantidade de atributos K', ylabel='RMSE', title='RMSE obtido dentre os parâmetros de\n regularização experimentados.')
+    ax.plot(Ts, avgs, label='RMSE')
     ax.legend()
     fig.savefig("ex02/TsMeans.png", dpi=300)
     
     fig, ax = plt.subplots()
-    ax.set(xlabel='Quantidade de atributos', ylabel='Parâmetro de regularização',
-        title='Melhor parâmetro de regularização\n dado o número de atributos')
+    ax.set(xlabel='Quantidade de atributos K', ylabel='Parâmetro de regularização',
+        title='Melhor parâmetro de regularização lambda\n dado o número de atributos')
     ax.plot(Ts, lamb, '-o', label='Melhor parâmetro de \nregularização para T atributos')
     fig.savefig("ex02/Tslambs.png", dpi=300)
 
@@ -66,6 +66,8 @@ def ex2(data):
     ax.legend()
     fig.savefig("ex02/model_rmse.png", dpi=300)
 
+    print('EX02:{} w={} var={} std={} mean={} len={} min={} max={}'.format(
+         model_info, w, np.var(rmse), np.mean(rmse), np.std(rmse), len(rmse), np.min(rmse), np.max(rmse)))
 
 def ex1(data):
     kfolds_info = data['kfolds_info']
