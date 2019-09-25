@@ -9,10 +9,22 @@ import numpy as np
 from utils import read_data, shuffle, get_inp_res, get_weight,\
     norm_zscore, dnorm_zscore, norm_lim, dnorm_lim, Kfold, generate_attributes
 
-def eval_model(w, test_inp, test_out):
-    y_est = test_inp.dot(w)
-    rm = (test_out - y_est)**2
-    return rm
+def eval_model(_train_inp, _train_out, _validation_inp, _validation_out,lamb, ident, min_, max_):
+    krms = []
+    for s_train_inp, s_train_out, s_validation_inp, s_validation_out in\
+            zip(_train_inp, _train_out, _validation_inp, _validation_out):
+        w = get_weight(s_train_inp, s_train_out, lamb, ident)
+        y_est = s_validation_inp.dot(w)
+
+        y_est_real = dnorm_lim(y_est, min_, max_)
+        s_real     = dnorm_lim(s_validation_out, min_, max_)
+        #y_est_real = dnorm_zscore(y_est, mean, std)
+        #s_real     = dnorm_zscore(s_validation_out, mean, std)
+        ms = (s_real - y_est_real)**2
+        rms = np.sqrt(ms)
+        krms.append(rms)
+    return krms
+
 
 if __name__ == '__main__':
     T_min, T_max = 1, 101 # Generated attribute
@@ -67,31 +79,38 @@ if __name__ == '__main__':
         ident = np.identity(T+1)
         ident[0][0] = 0
 
+        # Busca áurea de lambda
         res['lamb'] = []
-        # Lambdas ....
-        #lamb = 0.
-        lamb = lamb_ini
-        while lamb < lamb_max:
+        lim_a, lim_b, delta, fi = 0, 10e3, 10e-6, 0.618 # Delta 0.001%
+        while True:
             _train_inp, _train_out, _validation_inp, _validation_out = Kfold(folds, train_inp, train_out)
-            lamb += lamb_step
-
-            # Testing lambda k-fold ...
-            krms = []
-            for s_train_inp, s_train_out, s_validation_inp, s_validation_out in\
-                 zip(_train_inp, _train_out, _validation_inp, _validation_out):
-                w = get_weight(s_train_inp, s_train_out, lamb, ident)
-                y_est = s_validation_inp.dot(w)
-
-                y_est_real = dnorm_lim(y_est, min_, max_)
-                s_real     = dnorm_lim(s_validation_out, min_, max_)
-                #y_est_real = dnorm_zscore(y_est, mean, std)
-                #s_real     = dnorm_zscore(s_validation_out, mean, std)
-                ms = (s_real - y_est_real)**2
-                rms = np.sqrt(ms)
-                krms.append(rms)
-            np.mean(krms)
+            
+            # Current lambda
+            lamb = (lim_b - lim_a)*fi + lim_a
+            krms = eval_model(_train_inp, _train_out, _validation_inp, _validation_out, lamb, ident, min_, max_)
             res['lamb'].append({'mean':np.mean(krms), 'val':lamb})
-    
+            l_avg = np.mean(krms)
+
+            # Lamb = Low lim
+            high_lim_lamb = (lamb - lim_a)*fi + lim_a 
+            krms = eval_model(_train_inp, _train_out, _validation_inp, _validation_out, high_lim_lamb, ident, min_, max_)
+            high_lim_avg = np.mean(krms)
+            
+            # Lamb = Low lim
+            low_lim_lamb = (lim_b - lamb)*fi + lamb
+            krms = eval_model(_train_inp, _train_out, _validation_inp, _validation_out, low_lim_lamb, ident, min_, max_)
+            low_lim_avg = np.mean(krms)
+            
+            if (low_lim_avg < l_avg):
+                if (l_avg - low_lim_avg)/l_avg < delta:
+                    break
+                lim_a = low_lim_lamb
+            elif (high_lim_avg < l_avg):
+                if (l_avg - high_lim_avg)/l_avg < delta:
+                    break
+                lim_b = high_lim_lamb
+            else:
+                break
     # Locate best K value
     best_lambs = []
     for r in results:
