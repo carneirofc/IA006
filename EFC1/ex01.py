@@ -67,7 +67,7 @@ if __name__ == '__main__':
 
     # Locate best K value
     kfolds_info= []
-    for k in range(1,101):
+    for k in range(1,31):
         train_inp, train_out = get_inp_res(df_train['Temp'].values, k)
 
         # Fold and return the best weight (W)
