@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{prettyref}
+\usepackage{float}
 \newrefformat{fig}{[\ref{#1}]}
 
 \author{Cláudio Ferreira Carneiro - RA 263796}
@@ -62,8 +63,8 @@
        P(X=0|Y=0)&=0 & P(X=1|Y=0)&=1 & P(X=0|Y=1)&=0.4 & P(X=1|Y=1)&=0.6 
     \end{align*}
     \begin{align*}
-        H(X|Y)&=\frac{-1}{4}\log_{2}1 + \frac{-3}{8}\log_{2}0.5 + \frac{-3}{8}\log_{2}0.5=0.75 \\ 
-        H(Y|X)&=\frac{-1}{4}\log_{2}0.4 + \frac{-3}{8}\log_{2}1 + \frac{-3}{8}\log_{2}0.6=0.6068\\
+        H(Y|X)&=\frac{-1}{4}\log_{2}1 + \frac{-3}{8}\log_{2}0.5 + \frac{-3}{8}\log_{2}0.5=0.75 \\ 
+        H(X|Y)&=\frac{-1}{4}\log_{2}0.4 + \frac{-3}{8}\log_{2}1 + \frac{-3}{8}\log_{2}0.6=0.6068\\
         H(X,Y)&=H(X) + H(Y|X)=H(Y) + H(X|Y) 
     \end{align*}
     \paragraph{c)}
@@ -111,7 +112,7 @@
     Nesta atividade é utilizado o \textit{dataset} contendo a temperatura mínima
     diária em Melbourne, Austrália, no período de 1981 a 1990 \prettyref{fig:dataset}. As amostras do ano
     de 1990 foram reservadas para testes e o restante para treinamento e validação.
-    \begin{figure}[!ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=\linewidth]{ex01/dataset.png}
         \caption{Temperatura mínima diária em Melbourne, Austrália, no período de 1981 a 1990.}
@@ -122,23 +123,23 @@
     a primeira amostra utilizada do \textit{dataset} será deslocada em $K + 1$, sendo $K$ os atrasos.
     \subsection[]{Exercício 01}
     O valor ótimo de atrasos a serem incluídos no vetor de entrada do preditor está condicionado
-    ao resultado da validação do modelo para cada um dos $K$ atrasos, $0\leqslant K \leqslant  30$.
+    ao resultado da validação do modelo para cada um dos $K$ atrasos, para $0\leqslant K \leqslant  30$.
     É aplicada a técnica de validação cruzada \textit{k-fold}, sendo $k$ o número de partes, $folds$.
 
     O número de \textit{folds} utilizado na validação do modelo foi definido como $k=10$ por ser um valor
-    típico e separar para validação, \textit{datasets} de comprimento próximo ao número de dias no ano. 
+    típico e separar para validação \textit{datasets} de comprimento próximo ao número de dias no ano. 
     
     Nota-se que a quantidade de atrasos (atributos) afeta o desempenho do modelo
     porém não possui uma relação linear com o RMSE da estimação \prettyref{fig:ex1_kfold_rmse}. Ganhos consideráveis
-    são obtidos até certos valores de $K$; de forma menos abrupta o RMSE torna a aumentar.
-    \begin{figure}[!ht]
+    são obtidos até certos valores de $K$.
+    \begin{figure}[H]
         \centering
         \includegraphics[width=\linewidth]{ex01/folds.png}
         \caption{Exercício 01: RMSE com validação cruzada \textit{10-folds} para $K$ \textit{delays}.}
         \label{fig:ex1_kfold_rmse}
     \end{figure}
     O número de atrasos $K=22$ apesentou $RMSE=2.4215989698821407$, o menor erro quadrático médio durante a validação dos modelos.
-    Definido o número de atributos $K$, um novo modelo é calculado utilizando todos os dados, salvo os reservados para testes.
+    Definido o número de atributos $K=22$, um novo modelo é calculado utilizando todos os dados (treinamento e validação).
     \begin{align*}
 w=[ &0.60851412, 0.58768129, -0.08816496, 0.05312793, 0.03412434, 0.04066411, \\
     &0.028874  , 0.04560297,  0.01880947, 0.0336419,  0.00261787, 0.00780726, \\
@@ -157,7 +158,7 @@ w=[ &0.60851412, 0.58768129, -0.08816496, 0.05312793, 0.03412434, 0.04066411, \\
        max(RMSE)&=7.12356630491203 
    \end{align}
 
-   \begin{figure}[!ht]
+   \begin{figure}[H]
         \centering
         \includegraphics[width=\linewidth]{ex01/model.png}
         \caption{Exercício 01: RMSE do \textit{dataset} de teste para o modelo escolhido.}
@@ -165,7 +166,7 @@ w=[ &0.60851412, 0.58768129, -0.08816496, 0.05312793, 0.03412434, 0.04066411, \\
     \end{figure}
     As estimações de temperatura e os valores esperados para o \textit{dataset} de teste são
     mostrados na figura \prettyref{fig:ex1_model_comp}.
-    \begin{figure}[!ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=\linewidth]{ex01/model_comp.png}
         \caption{Exercício 01: Estimação do modelo para o \textit{dataset} de teste e o valor esperado.}
@@ -180,7 +181,7 @@ w=[ &0.60851412, 0.58768129, -0.08816496, 0.05312793, 0.03412434, 0.04066411, \\
     método da Seção Áurea com critério de parada de $0.001\%$ na variação do RMSE.
     Foram utilizados na geração dos atributos $T$,
     pesos obtidos a partir de uma distribuição uniforme na faixa $]-1,1[$
-    \begin{figure}[!ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=\linewidth]{ex02/TsMeans.png}
         \caption{Exercício 02: RMSE em função do número de atributos $T$.}
@@ -188,7 +189,7 @@ w=[ &0.60851412, 0.58768129, -0.08816496, 0.05312793, 0.03412434, 0.04066411, \\
     \end{figure}
     
     O melhor parâmetro de regularização $\lambda$, para cada valor de $T$ é apresentado na figura \prettyref{fig:ex2_Tlamb}.
-    \begin{figure}[!ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=\linewidth]{ex02/Tslambs.png}
         \caption{Exercício 02: Melhor $\lambda$ para dados $T$ atributos.}
@@ -204,15 +205,15 @@ w=[ &0.60851412, 0.58768129, -0.08816496, 0.05312793, 0.03412434, 0.04066411, \\
         min(RMSE)&=0.003573731813188985\\
         max(RMSE)&=7.320990019087004\\
     \end{align}
-    \begin{figure}[!ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=\linewidth]{ex02/model_rmse.png}
         \caption{Exercício 02: RMSE do \textit{dataset} de teste para o modelo escolhido.}
         \label{fig:ex2_rmse}
     \end{figure}
 
-    O gráfico dos resultados esperados do \textit{dataset} de testes e as estimações do modelo podem ser vistas em \prettyref{fig:ex2_comp}. 
-    \begin{figure}[!ht]
+    O gráfico dos resultados esperados do \textit{dataset} de testes e as estimações do modelo podem ser vistas na figura \prettyref{fig:ex2_comp}. 
+    \begin{figure}[H]
         \centering
         \includegraphics[width=\linewidth]{ex02/model_test.png}
         \caption{Exercício 02: Estimação do modelo para o \textit{dataset} de teste e o valor esperado.}
