@@ -21,8 +21,13 @@
     O código referente às atividades se encontra no repositório:
     
     https://github.com/carneirofc/IA006.git\linebreak
-    
     \subsection[]{a) Características dos atributos de entrada}
+        Os histogramas dos atributos em sua forma original são apresentados nas figuras \prettyref{fig:a_hist_1},
+        \prettyref{fig:a_hist_2} e \prettyref{fig:a_hist_3}. A correlação dos atributos é apresentada
+        na forma de um \textit{heatmap} \prettyref{fig:a_corr_heat} e por gráficos de dispersão \prettyref{fig:a_corr_scatter}
+        (na diagonal principal é exibido o histograma do atributo).
+        Percebe-se que determinados atributos apresentam alto grau de correlação.
+        
         \begin{figure}[H]
             \begin{subfigure}{.5\textwidth}
                 \centering
@@ -122,6 +127,11 @@
                 \includegraphics[width=.8\linewidth]{img1/data_histsp_ent.png}
                 \caption{histsp.ent}
             \end{subfigure}
+            \begin{subfigure}{.5\textwidth}
+                \centering
+                \includegraphics[width=.8\linewidth]{img1/data_histlabel.png}
+                \caption{label}
+            \end{subfigure}
         \caption{Classificação binária: Histograma dos atributos (3)}
         \label{fig:a_hist_3}
         \end{figure}
@@ -139,6 +149,19 @@
             \label{fig:a_corr_scatter}
         \end{figure}
     \subsection[]{b) Curva ROC e $F_1$-medida}
+        É utilizado o método \textit{Z-score} para normalização dos dados. Tal método foi escolhido
+        pois favorece o progresso de algoritmos baseados no gradiente descendente, uma vez que deixa as curvas de nível
+        da superfície de erro mais circulares.
+
+        O processo de treinamento tem como critério de parada a variação da função de custo. Quando
+        o decréscimo por década do custo for inferior a $10^{-8}$ é terminado o processo de treinamento.
+
+        Parâmetros de treinamento:
+        \begin{align*}
+            \eta&=10^{-2} \\
+            tol&=10^{-8}
+        \end{align*}
+        sendo $\eta$ a taxa de aprendizagem e $tol$ o limiar para o término do treinamento.
         \begin{figure}[H]
             \centering
             \includegraphics[width=\textwidth]{img1/roc.png}
@@ -173,7 +196,7 @@
         \textbf{Verdadeira} & Feminino & \multicolumn{1}{c|}{-} & \multicolumn{1}{c|}{21} & \multicolumn{1}{c|}{1246} \\ \cline{4-5} 
         \end{tabular}
     \end{table}
-    O classificador apresenta acurácia (acc), precisão() e \textit{recall} de:
+    O classificador apresenta acurácia (acc), precisão (prec) e \textit{recall} de:
     \begin{align*}
         acc & \approx0.9759 \\
         prec & \approx0.9832 \\

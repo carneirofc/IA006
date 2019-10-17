@@ -111,6 +111,7 @@ INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /home/carneirofc/IA006/EFC2/img1/data_histcentroid.png
 INPUT /home/carneirofc/IA006/EFC2/img1/data_histcentroid.png
 INPUT /home/carneirofc/IA006/EFC2/img1/data_histcentroid.png
@@ -174,6 +175,9 @@ INPUT /home/carneirofc/IA006/EFC2/img1/data_histskew.png
 INPUT /home/carneirofc/IA006/EFC2/img1/data_histsp_ent.png
 INPUT /home/carneirofc/IA006/EFC2/img1/data_histsp_ent.png
 INPUT /home/carneirofc/IA006/EFC2/img1/data_histsp_ent.png
+INPUT /home/carneirofc/IA006/EFC2/img1/data_histlabel.png
+INPUT /home/carneirofc/IA006/EFC2/img1/data_histlabel.png
+INPUT /home/carneirofc/IA006/EFC2/img1/data_histlabel.png
 INPUT /home/carneirofc/IA006/EFC2/img1/data_corr.png
 INPUT /home/carneirofc/IA006/EFC2/img1/data_corr.png
 INPUT /home/carneirofc/IA006/EFC2/img1/data_corr.png
@@ -187,7 +191,6 @@ INPUT /home/carneirofc/IA006/EFC2/img1/f1_score.png
 INPUT /home/carneirofc/IA006/EFC2/img1/f1_score.png
 INPUT /home/carneirofc/IA006/EFC2/img1/f1_score.png
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
@@ -204,4 +207,5 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
