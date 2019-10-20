@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.9.22)  20 OCT 2019 12:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.9.22)  20 OCT 2019 16:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -22,6 +22,24 @@ File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
+) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2019/04/03 3.29 The Babel package
+ (/usr/share/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2019/04/03 3.29 Babel switching mechanism
+) (/usr/share/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+ (/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2019/04/03 3.29 Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+ (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count89
+)
+Package babel Info: Making " an active character on input line 145.
+)) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
 ) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip43
@@ -31,49 +49,49 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2000/06/29 v2.01 AMS text
  (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks14
-\ex@=\dimen103
+\@emptytoks=\toks16
+\ex@=\dimen104
 )) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen104
+\pmbraise@=\dimen105
 ) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count88
+\inf@bad=\count90
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count89
-\leftroot@=\count90
+\uproot@=\count91
+\leftroot@=\count92
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count91
-\DOTSCASE@=\count92
+\classnum@=\count93
+\DOTSCASE@=\count94
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
 \Mathstrutbox@=\box27
 \strutbox@=\box28
-\big@size=\dimen105
+\big@size=\dimen106
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count93
-\c@MaxMatrixCols=\count94
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
 \dotsspace@=\muskip10
-\c@parentequation=\count95
-\dspbrk@lvl=\count96
-\tag@help=\toks15
-\row@=\count97
-\column@=\count98
-\maxfields@=\count99
-\andhelp@=\toks16
-\eqnshift@=\dimen106
-\alignsep@=\dimen107
-\tagshift@=\dimen108
-\tagwidth@=\dimen109
-\totwidth@=\dimen110
-\lineht@=\dimen111
-\@envbody=\toks17
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks17
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks18
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks19
 \multlinegap=\skip44
 \multlinetaggap=\skip45
-\mathdisplay@stack=\toks18
+\mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 ) (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
@@ -88,7 +106,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks19
+\KV@toks@=\toks21
 ) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
  (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
@@ -100,34 +118,34 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
  (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen112
-\Gin@req@width=\dimen113
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
 ) (/usr/share/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
  (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen114
-\captionmargin@=\dimen115
-\captionwidth=\dimen116
-\caption@tempdima=\dimen117
-\caption@indent=\dimen118
-\caption@parindent=\dimen119
-\caption@hangindent=\dimen120
+\captionmargin=\dimen115
+\captionmargin@=\dimen116
+\captionwidth=\dimen117
+\caption@tempdima=\dimen118
+\caption@indent=\dimen119
+\caption@parindent=\dimen120
+\caption@hangindent=\dimen121
 )
-\c@caption@flags=\count100
-\c@ContinuedFloat=\count101
+\c@caption@flags=\count102
+\c@ContinuedFloat=\count103
 ) (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count102
-\float@exts=\toks20
+\c@float@type=\count104
+\float@exts=\toks22
 \float@box=\box29
-\@float@everytoks=\toks21
+\@float@everytoks=\toks23
 \@floatcapt=\box30
 ) (/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
-\c@subfigure=\count103
-\c@subtable=\count104
+\c@subfigure=\count105
+\c@subtable=\count106
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
  (/usr/share/texmf-dist/tex/latex/graphics/lscape.sty
@@ -138,7 +156,13 @@ Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
  (/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+)) (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
+\multirow@colwidth=\skip46
+\multirow@cntb=\count107
+\multirow@dima=\skip47
+\bigstrutjot=\dimen122
+) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
  (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
@@ -148,18 +172,18 @@ Package xcolor Info: Driver file: pdftex.def on input line 225.
 Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
  (/usr/share/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
-\col@sep=\dimen121
+\col@sep=\dimen123
 \ar@mcellbox=\box31
-\extrarowheight=\dimen122
-\NC@list=\toks22
-\extratabsurround=\skip46
-\backup@length=\skip47
+\extrarowheight=\dimen124
+\NC@list=\toks24
+\extratabsurround=\skip48
+\backup@length=\skip49
 \ar@cellbox=\box32
 )
-\everycr=\toks23
-\minrowclearance=\skip48
+\everycr=\toks25
+\minrowclearance=\skip50
 )
-\rownum=\count105
+\rownum=\count108
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -172,31 +196,31 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ) (/home/carneirofc/IA006/EFC2/263796.aux)
 \openout1 = `263796.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
-\scratchdimen=\dimen123
+\scratchcounter=\count109
+\scratchdimen=\dimen125
 \scratchbox=\box33
-\nofMPsegments=\count107
-\nofMParguments=\count108
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count109
-\MPscratchDim=\dimen124
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
-\everyMPtoPDFconversion=\toks25
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count112
+\MPscratchDim=\dimen126
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
+\everyMPtoPDFconversion=\toks27
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
@@ -233,137 +257,137 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 14.
+LaTeX Font Info:    Try loading font information for U+msa on input line 17.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 14.
+LaTeX Font Info:    Try loading font information for U+msb on input line 17.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 []\OT1/cmr/m/n/10 https://github.com/carneirofc/IA006.git
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
 <img1/data_histcentroid.png, id=8, 462.528pt x 317.988pt>
 File: img1/data_histcentroid.png Graphic file (type png)
 <use img1/data_histcentroid.png>
-Package pdftex.def Info: img1/data_histcentroid.png  used on input line 32.
+Package pdftex.def Info: img1/data_histcentroid.png  used on input line 37.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histdfrange.png, id=10, 462.528pt x 317.988pt>
 File: img1/data_histdfrange.png Graphic file (type png)
 <use img1/data_histdfrange.png>
-Package pdftex.def Info: img1/data_histdfrange.png  used on input line 37.
+Package pdftex.def Info: img1/data_histdfrange.png  used on input line 42.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histIQR.png, id=11, 462.528pt x 317.988pt>
 File: img1/data_histIQR.png Graphic file (type png)
 <use img1/data_histIQR.png>
-Package pdftex.def Info: img1/data_histIQR.png  used on input line 42.
+Package pdftex.def Info: img1/data_histIQR.png  used on input line 47.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histkurt.png, id=12, 462.528pt x 317.988pt>
 File: img1/data_histkurt.png Graphic file (type png)
 <use img1/data_histkurt.png>
-Package pdftex.def Info: img1/data_histkurt.png  used on input line 47.
+Package pdftex.def Info: img1/data_histkurt.png  used on input line 52.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histmaxdom.png, id=13, 462.528pt x 317.988pt>
 File: img1/data_histmaxdom.png Graphic file (type png)
 <use img1/data_histmaxdom.png>
-Package pdftex.def Info: img1/data_histmaxdom.png  used on input line 52.
+Package pdftex.def Info: img1/data_histmaxdom.png  used on input line 57.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histmaxfun.png, id=14, 462.528pt x 317.988pt>
 File: img1/data_histmaxfun.png Graphic file (type png)
 <use img1/data_histmaxfun.png>
-Package pdftex.def Info: img1/data_histmaxfun.png  used on input line 57.
+Package pdftex.def Info: img1/data_histmaxfun.png  used on input line 62.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histmeandom.png, id=15, 462.528pt x 317.988pt>
 File: img1/data_histmeandom.png Graphic file (type png)
 <use img1/data_histmeandom.png>
-Package pdftex.def Info: img1/data_histmeandom.png  used on input line 62.
+Package pdftex.def Info: img1/data_histmeandom.png  used on input line 67.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histmeanfun.png, id=16, 462.528pt x 317.988pt>
 File: img1/data_histmeanfun.png Graphic file (type png)
 <use img1/data_histmeanfun.png>
-Package pdftex.def Info: img1/data_histmeanfun.png  used on input line 67.
+Package pdftex.def Info: img1/data_histmeanfun.png  used on input line 72.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 30--70
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 35--75
 []$ $[]$
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 30--70
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 35--75
 []$ $[]$
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 30--70
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 35--75
 []$ $[]$ 
  []
 
 <img1/data_histmindom.png, id=17, 462.528pt x 317.988pt>
 File: img1/data_histmindom.png Graphic file (type png)
 <use img1/data_histmindom.png>
-Package pdftex.def Info: img1/data_histmindom.png  used on input line 76.
+Package pdftex.def Info: img1/data_histmindom.png  used on input line 81.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histminfun.png, id=18, 462.528pt x 317.988pt>
 File: img1/data_histminfun.png Graphic file (type png)
 <use img1/data_histminfun.png>
-Package pdftex.def Info: img1/data_histminfun.png  used on input line 81.
+Package pdftex.def Info: img1/data_histminfun.png  used on input line 86.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histmode.png, id=19, 462.528pt x 317.988pt>
 File: img1/data_histmode.png Graphic file (type png)
 <use img1/data_histmode.png>
-Package pdftex.def Info: img1/data_histmode.png  used on input line 86.
+Package pdftex.def Info: img1/data_histmode.png  used on input line 91.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histmodindx.png, id=20, 462.528pt x 317.988pt>
 File: img1/data_histmodindx.png Graphic file (type png)
 <use img1/data_histmodindx.png>
-Package pdftex.def Info: img1/data_histmodindx.png  used on input line 91.
+Package pdftex.def Info: img1/data_histmodindx.png  used on input line 96.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histQ25.png, id=21, 462.528pt x 317.988pt>
 File: img1/data_histQ25.png Graphic file (type png)
 <use img1/data_histQ25.png>
-Package pdftex.def Info: img1/data_histQ25.png  used on input line 96.
+Package pdftex.def Info: img1/data_histQ25.png  used on input line 101.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histQ75.png, id=22, 462.528pt x 317.988pt>
 File: img1/data_histQ75.png Graphic file (type png)
 <use img1/data_histQ75.png>
-Package pdftex.def Info: img1/data_histQ75.png  used on input line 101.
+Package pdftex.def Info: img1/data_histQ75.png  used on input line 106.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histsd.png, id=23, 462.528pt x 317.988pt>
 File: img1/data_histsd.png Graphic file (type png)
 <use img1/data_histsd.png>
-Package pdftex.def Info: img1/data_histsd.png  used on input line 106.
+Package pdftex.def Info: img1/data_histsd.png  used on input line 111.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histsfm.png, id=24, 462.528pt x 317.988pt>
 File: img1/data_histsfm.png Graphic file (type png)
 <use img1/data_histsfm.png>
-Package pdftex.def Info: img1/data_histsfm.png  used on input line 111.
+Package pdftex.def Info: img1/data_histsfm.png  used on input line 116.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 74--114
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 79--119
 []$[]$ $[]$
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 74--114
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 79--119
 []$ $[]$
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 74--114
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 79--119
 []$ $[]$
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 74--114
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 79--119
 []$ $[]$ 
  []
 
@@ -371,20 +395,20 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 74--114
 <img1/data_histskew.png, id=31, 462.528pt x 317.988pt>
 File: img1/data_histskew.png Graphic file (type png)
 <use img1/data_histskew.png>
-Package pdftex.def Info: img1/data_histskew.png  used on input line 120.
+Package pdftex.def Info: img1/data_histskew.png  used on input line 125.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histsp_ent.png, id=32, 462.528pt x 317.988pt>
 File: img1/data_histsp_ent.png Graphic file (type png)
 <use img1/data_histsp_ent.png>
-Package pdftex.def Info: img1/data_histsp_ent.png  used on input line 125.
+Package pdftex.def Info: img1/data_histsp_ent.png  used on input line 130.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 <img1/data_histlabel.png, id=33, 462.528pt x 317.988pt>
 File: img1/data_histlabel.png Graphic file (type png)
 <use img1/data_histlabel.png>
-Package pdftex.def Info: img1/data_histlabel.png  used on input line 130.
+Package pdftex.def Info: img1/data_histlabel.png  used on input line 135.
 (pdftex.def)             Requested size: 138.00052pt x 94.8731pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 118--133
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 123--138
 []$[]$ $[]$
  []
 
@@ -392,81 +416,78 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 118--133
 <img1/data_corr.png, id=57, 867.24pt x 867.24pt>
 File: img1/data_corr.png Graphic file (type png)
 <use img1/data_corr.png>
-Package pdftex.def Info: img1/data_corr.png  used on input line 139.
+Package pdftex.def Info: img1/data_corr.png  used on input line 144.
 (pdftex.def)             Requested size: 276.00105pt x 276.00067pt.
 <img1/data_corr_scatter.png, id=58, 433.62pt x 289.08pt>
 File: img1/data_corr_scatter.png Graphic file (type png)
 <use img1/data_corr_scatter.png>
-Package pdftex.def Info: img1/data_corr_scatter.png  used on input line 145.
+Package pdftex.def Info: img1/data_corr_scatter.png  used on input line 150.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
  [4 </home/carneirofc/IA006/EFC2/img1/data_histskew.png> </home/carneirofc/IA006/EFC2/img1/data_histsp_ent.png> </home/carneirofc/IA006/EFC2/img1/data_histlabel.png>] [5 </home/carneirofc/IA006/EFC2/img1/data_corr.png>]
 <img1/roc.png, id=69, 722.7pt x 361.35pt>
 File: img1/roc.png Graphic file (type png)
 <use img1/roc.png>
-Package pdftex.def Info: img1/roc.png  used on input line 165.
+Package pdftex.def Info: img1/roc.png  used on input line 170.
 (pdftex.def)             Requested size: 345.0pt x 172.49767pt.
 <img1/f1_score.png, id=70, 722.7pt x 361.35pt>
 File: img1/f1_score.png Graphic file (type png)
 <use img1/f1_score.png>
-Package pdftex.def Info: img1/f1_score.png  used on input line 171.
+Package pdftex.def Info: img1/f1_score.png  used on input line 176.
 (pdftex.def)             Requested size: 345.0pt x 172.49767pt.
  [6 </home/carneirofc/IA006/EFC2/img1/data_corr_scatter.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 188.
+               Default added (so using `tbp') on input line 193.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 201.
+               Default added (so using `tbp') on input line 206.
 
 [7 </home/carneirofc/IA006/EFC2/img1/roc.png> </home/carneirofc/IA006/EFC2/img1/f1_score.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 216.
+               Default added (so using `tbp') on input line 221.
 
 
-Overfull \hbox (73.57565pt too wide) in paragraph at lines 217--222
+Overfull \hbox (73.57565pt too wide) in paragraph at lines 222--227
 [][] 
  []
 
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 235.
-
-
-Overfull \hbox (53.91344pt too wide) in paragraph at lines 236--245
+Overfull \hbox (53.91344pt too wide) in paragraph at lines 243--252
 [][] 
  []
 
-[8]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 249.
-
-<img2/knn.png, id=92, 722.7pt x 361.35pt>
+[8] [9]
+<img2/knn.png, id=95, 1084.05pt x 722.7pt>
 File: img2/knn.png Graphic file (type png)
 <use img2/knn.png>
-Package pdftex.def Info: img2/knn.png  used on input line 277.
-(pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
-[9]
-Overfull \hbox (53.91344pt too wide) in paragraph at lines 285--294
+Package pdftex.def Info: img2/knn.png  used on input line 294.
+(pdftex.def)             Requested size: 345.0pt x 230.00055pt.
+
+Overfull \hbox (53.91344pt too wide) in paragraph at lines 303--312
 [][] 
  []
 
-[10 </home/carneirofc/IA006/EFC2/img2/knn.png>] (/home/carneirofc/IA006/EFC2/263796.aux) ) 
+[10 </home/carneirofc/IA006/EFC2/img2/knn.png>]
+Overfull \hbox (43.67068pt too wide) in paragraph at lines 338--345
+[][] 
+ []
+
+[11] (/home/carneirofc/IA006/EFC2/263796.aux) ) 
 Here is how much of TeX's memory you used:
- 4317 strings out of 492623
- 62489 string characters out of 6135669
- 142911 words of memory out of 5000000
- 8136 multiletter control sequences out of 15000+600000
- 13205 words of font info for 50 fonts, out of 8000000 for 9000
+ 4958 strings out of 492623
+ 71194 string characters out of 6135669
+ 163020 words of memory out of 5000000
+ 8751 multiletter control sequences out of 15000+600000
+ 13824 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,17n,39p,322b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on /home/carneirofc/IA006/EFC2/263796.pdf (11 pages, 3756033 bytes).
+ 41i,20n,39p,363b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on /home/carneirofc/IA006/EFC2/263796.pdf (12 pages, 3909664 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 164 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
