@@ -66,9 +66,9 @@
     o treinamento é finalizado.
     
     A MLP foi treinada por $200$ épocas, quando o processo foi interrompido pela
-    parada prematura, com custo de treinamento $loss: 0.3236$ e custo de validação
-    $val_loss: 0.3471$, figura \ref{fig:mlp_training}. Os pesos utilizados são da época $134$, onde o custo de validação
-    é $val_loss: 0.34124$.
+    parada prematura, com custo de treinamento $loss: 0.3225$ e custo de validação
+    $val_loss: 0.3459$, figura \ref{fig:mlp_training}. Os pesos utilizados são da época $146$, onde o custo de validação
+    é $val_loss: 0.3391$.
 
     \begin{figure}[H]
         \centering
@@ -86,8 +86,8 @@
     \end{figure}
 
     \subsection*{b)}
-    A região de decisão se assemelha à região ótima porém é visível ainda existem padrões
-    a serem capturados pela MPL.
+    A região de decisão se assemelha à região ótima porém é visível que ainda existem padrões
+    a serem corretamente capturados pela MPL.
     \begin{figure}[H]
         \centering
         \includegraphics[width=\linewidth]{mpl_decision.png}   
@@ -101,23 +101,164 @@
         \begin{tabular}{c|c|c|c|c|}
         \cline{2-5}
                                         & \textbf{Precision} & \textbf{Recall} & \textbf{f1-score} & \textbf{support} \\ \hline
-        \multicolumn{1}{|c|}{Classe -1}    & 0.86               & 0.88            & 0.87              & 499              \\ \hline
-        \multicolumn{1}{|c|}{Classe 1}     & 0.88               & 0.86            & 0.87              & 501              \\ \hline
+        \multicolumn{1}{|c|}{Classe -1}    & 0.86               & 0.90            & 0.88              & 499              \\ \hline
+        \multicolumn{1}{|c|}{Classe 1}     & 0.89               & 0.85            & 0.87              & 501              \\ \hline
         \multicolumn{1}{|c|}{}             &                    &                 &                   &                  \\ \hline
         \multicolumn{1}{|c|}{accuracy}     &                    &                 & 0.87              & 1000             \\ \hline
         \multicolumn{1}{|c|}{macro avg}    & 0.87               & 0.87            & 0.87              & 1000             \\ \hline
         \multicolumn{1}{|c|}{weighted avg} & 0.87               & 0.87            & 0.87              & 1000             \\ \hline
         \end{tabular}
-        \caption{Classificação do \textit{dataset} de teste.}
+        \caption{Classificação do \textit{dataset} de teste, MLP.}
         \label{tbl:mpl_test}
     \end{table}
 
     \subsection*{d)}
 
     \subsection*{e)}
+    Vetores suport e regiões de decisão da SVM de $C=1$ e kernel RBF. 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{svm_decision.png}   
+        \caption{Regiões de decisão SVM.}
+        \label{fig:svm_decision}
+    \end{figure}
+
 
     \subsection*{f)}
-    
+    Com o uso da SVM é obtida uma acurácia de $87\%$ conforme a tabela \ref{tbl:svm_test}.
+    \begin{table}[H]
+        \begin{tabular}{c|c|c|c|c|}
+        \cline{2-5}
+                                        & \textbf{Precision} & \textbf{Recall} & \textbf{f1-score} & \textbf{support} \\ \hline
+        \multicolumn{1}{|c|}{Classe -1}    & 0.86               & 0.87            & 0.87              & 499              \\ \hline
+        \multicolumn{1}{|c|}{Classe 1}     & 0.87               & 0.86            & 0.87              & 501              \\ \hline
+        \multicolumn{1}{|c|}{}             &                    &                 &                   &                  \\ \hline
+        \multicolumn{1}{|c|}{accuracy}     &                    &                 & 0.87              & 1000             \\ \hline
+        \multicolumn{1}{|c|}{macro avg}    & 0.87               & 0.87            & 0.87              & 1000             \\ \hline
+        \multicolumn{1}{|c|}{weighted avg} & 0.87               & 0.87            & 0.87              & 1000             \\ \hline
+        \end{tabular}
+        \caption{Classificação do \textit{dataset} de teste, SVM.}
+        \label{tbl:svm_test}
+    \end{table} 
     \subsection*{g)}
+    As figuras \ref{fig:svm_decision_linear} e \ref{fig:svm_decision_poly} apresentam
+    as regiões de decisão de SVMs com kernel linear e polinomial respectivamente. Nota-se
+    que a escolha do kernel possui um impacto significativo no desempenho da SVM. Conforme as
+    regiões de decisão obtidas, os kernels não possuem a flexibilidade exigida pelo problema.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{svm_decision_linear.png}   
+        \caption{Regiões de decisão, SVM com kernel linear.}
+        \label{fig:svm_decision_linear}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \begin{subfigure}{.5\textwidth}
+            \centering
+                \includegraphics[width=\linewidth]{svm_decision_poly.png}   
+            \caption{Polinômio de grau 3}
+        \end{subfigure}
+        \begin{subfigure}{.5\textwidth}
+            \centering
+                \includegraphics[width=\linewidth]{svm_decision_poly_9.png}   
+            \caption{Polinômio de grau 9}
+        \end{subfigure}
+        \caption{Regiões de decisão SVM, com kernel polinomial de grau $3$ e $9$.}
+        \label{fig:svm_decision_poly}
+    \end{figure}
+
+    A figura \ref{fig:svm_decision_C} apresenta as regiões de decisão conforme o parâmetro
+    $C$ é modificado. Para valores baixos de $C$, a SVM tende a classificar incorretamente
+    maiores quantidades de amostras.
+    
+    \begin{figure}[H]
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_0.1}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_0.2}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_0.3}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_0.4}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_0.5}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_0.6}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_0.6}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_0.7}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_0.8}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_0.9}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_1.0}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_1.1}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_1.2}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_1.3}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_1.4}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_1.5}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_1.6}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_1.7}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_1.8}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_1.9}.png}   
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{{svm_decision_2.0}.png}   
+        \end{subfigure}
+        \caption{Regiões de decisão SVM, com kernel RBF para diversos $C$.}
+        \label{fig:svm_decision_C}
+    \end{figure}
 
 \end{document}

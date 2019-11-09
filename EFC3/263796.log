@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.9.22)  9 NOV 2019 17:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.9.22)  9 NOV 2019 20:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -308,20 +308,182 @@ File: mpl_decision.png Graphic file (type png)
 <use mpl_decision.png>
 Package pdftex.def Info: mpl_decision.png  used on input line 93.
 (pdftex.def)             Requested size: 345.0pt x 230.01158pt.
- [3 </home/carneirofc/IA006/EFC3/mlp_training.png> </home/carneirofc/IA006/EFC3/mlp_roc.png>] [4 </home/carneirofc/IA006/EFC3/mpl_decision.png>] (/home/carneirofc/IA006/EFC3/263796.aux) ) 
+ [3 </home/carneirofc/IA006/EFC3/mlp_training.png> </home/carneirofc/IA006/EFC3/mlp_roc.png>]
+<svm_decision.png, id=34, 433.62pt x 289.08pt>
+File: svm_decision.png Graphic file (type png)
+<use svm_decision.png>
+Package pdftex.def Info: svm_decision.png  used on input line 121.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+ [4 </home/carneirofc/IA006/EFC3/mpl_decision.png>]
+<svm_decision_linear.png, id=40, 433.62pt x 289.08pt>
+File: svm_decision_linear.png Graphic file (type png)
+<use svm_decision_linear.png>
+Package pdftex.def Info: svm_decision_linear.png  used on input line 151.
+(pdftex.def)             Requested size: 345.0pt x 230.01158pt.
+ [5 </home/carneirofc/IA006/EFC3/svm_decision.png>]
+<svm_decision_poly.png, id=45, 433.62pt x 289.08pt>
+File: svm_decision_poly.png Graphic file (type png)
+<use svm_decision_poly.png>
+Package pdftex.def Info: svm_decision_poly.png  used on input line 159.
+(pdftex.def)             Requested size: 172.5pt x 114.99918pt.
+<svm_decision_poly_9.png, id=46, 433.62pt x 289.08pt>
+File: svm_decision_poly_9.png Graphic file (type png)
+<use svm_decision_poly_9.png>
+Package pdftex.def Info: svm_decision_poly_9.png  used on input line 164.
+(pdftex.def)             Requested size: 172.5pt x 114.99918pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 157--167
+[]$[]$ $[]$ 
+ []
+
+<svm_decision_0.1.png, id=47, 433.62pt x 289.08pt>
+File: svm_decision_0.1.png Graphic file (type png)
+<use svm_decision_0.1.png>
+Package pdftex.def Info: svm_decision_0.1.png  used on input line 178.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_0.2.png, id=48, 433.62pt x 289.08pt>
+File: svm_decision_0.2.png Graphic file (type png)
+<use svm_decision_0.2.png>
+Package pdftex.def Info: svm_decision_0.2.png  used on input line 182.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_0.3.png, id=49, 433.62pt x 289.08pt>
+File: svm_decision_0.3.png Graphic file (type png)
+<use svm_decision_0.3.png>
+Package pdftex.def Info: svm_decision_0.3.png  used on input line 186.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_0.4.png, id=50, 433.62pt x 289.08pt>
+File: svm_decision_0.4.png Graphic file (type png)
+<use svm_decision_0.4.png>
+Package pdftex.def Info: svm_decision_0.4.png  used on input line 190.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_0.5.png, id=51, 433.62pt x 289.08pt>
+File: svm_decision_0.5.png Graphic file (type png)
+<use svm_decision_0.5.png>
+Package pdftex.def Info: svm_decision_0.5.png  used on input line 194.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_0.6.png, id=52, 433.62pt x 289.08pt>
+File: svm_decision_0.6.png Graphic file (type png)
+<use svm_decision_0.6.png>
+Package pdftex.def Info: svm_decision_0.6.png  used on input line 198.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+File: svm_decision_0.6.png Graphic file (type png)
+<use svm_decision_0.6.png>
+Package pdftex.def Info: svm_decision_0.6.png  used on input line 202.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_0.7.png, id=53, 433.62pt x 289.08pt>
+File: svm_decision_0.7.png Graphic file (type png)
+<use svm_decision_0.7.png>
+Package pdftex.def Info: svm_decision_0.7.png  used on input line 206.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_0.8.png, id=54, 433.62pt x 289.08pt>
+File: svm_decision_0.8.png Graphic file (type png)
+<use svm_decision_0.8.png>
+Package pdftex.def Info: svm_decision_0.8.png  used on input line 210.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_0.9.png, id=55, 433.62pt x 289.08pt>
+File: svm_decision_0.9.png Graphic file (type png)
+<use svm_decision_0.9.png>
+Package pdftex.def Info: svm_decision_0.9.png  used on input line 214.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_1.0.png, id=56, 433.62pt x 289.08pt>
+File: svm_decision_1.0.png Graphic file (type png)
+<use svm_decision_1.0.png>
+Package pdftex.def Info: svm_decision_1.0.png  used on input line 218.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_1.1.png, id=57, 433.62pt x 289.08pt>
+File: svm_decision_1.1.png Graphic file (type png)
+<use svm_decision_1.1.png>
+Package pdftex.def Info: svm_decision_1.1.png  used on input line 222.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_1.2.png, id=58, 433.62pt x 289.08pt>
+File: svm_decision_1.2.png Graphic file (type png)
+<use svm_decision_1.2.png>
+Package pdftex.def Info: svm_decision_1.2.png  used on input line 226.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_1.3.png, id=59, 433.62pt x 289.08pt>
+File: svm_decision_1.3.png Graphic file (type png)
+<use svm_decision_1.3.png>
+Package pdftex.def Info: svm_decision_1.3.png  used on input line 230.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_1.4.png, id=60, 433.62pt x 289.08pt>
+File: svm_decision_1.4.png Graphic file (type png)
+<use svm_decision_1.4.png>
+Package pdftex.def Info: svm_decision_1.4.png  used on input line 234.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_1.5.png, id=61, 433.62pt x 289.08pt>
+File: svm_decision_1.5.png Graphic file (type png)
+<use svm_decision_1.5.png>
+Package pdftex.def Info: svm_decision_1.5.png  used on input line 238.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_1.6.png, id=62, 433.62pt x 289.08pt>
+File: svm_decision_1.6.png Graphic file (type png)
+<use svm_decision_1.6.png>
+Package pdftex.def Info: svm_decision_1.6.png  used on input line 242.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_1.7.png, id=63, 433.62pt x 289.08pt>
+File: svm_decision_1.7.png Graphic file (type png)
+<use svm_decision_1.7.png>
+Package pdftex.def Info: svm_decision_1.7.png  used on input line 246.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_1.8.png, id=64, 433.62pt x 289.08pt>
+File: svm_decision_1.8.png Graphic file (type png)
+<use svm_decision_1.8.png>
+Package pdftex.def Info: svm_decision_1.8.png  used on input line 250.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_1.9.png, id=65, 433.62pt x 289.08pt>
+File: svm_decision_1.9.png Graphic file (type png)
+<use svm_decision_1.9.png>
+Package pdftex.def Info: svm_decision_1.9.png  used on input line 254.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+<svm_decision_2.0.png, id=66, 433.62pt x 289.08pt>
+File: svm_decision_2.0.png Graphic file (type png)
+<use svm_decision_2.0.png>
+Package pdftex.def Info: svm_decision_2.0.png  used on input line 258.
+(pdftex.def)             Requested size: 103.50105pt x 68.99686pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--260
+[]$[]$ $[]$ $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--260
+[]$ $[]$ $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--260
+[]$ $[]$ $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--260
+[]$ $[]$ $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--260
+[]$ $[]$ $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--260
+[]$ $[]$ $[]$
+ []
+
+[6 </home/carneirofc/IA006/EFC3/svm_decision_linear.png> </home/carneirofc/IA006/EFC3/svm_decision_poly.png> </home/carneirofc/IA006/EFC3/svm_decision_poly_9.png>] [7 </home/carneirofc/IA006/EFC3/svm_decision_0.1.png> </home/carneirofc/IA006/EFC3/svm_decision_0.2.png> </home/carneirofc/IA006/EFC3/svm_decision_0.3.png> </home/carneirofc/IA006/EFC3/svm_decision_0.4.png> </home/carneirofc/IA006/EFC3/svm_decision_0.5.png> </home/carneirofc/IA006/EFC3/svm_decision_0.6.png> </home/carneirofc/IA006/EFC3/svm_decision_0.7.png> </home/carneirofc/IA006/EFC3/svm_decision_0.8.png> </home/carneirofc/IA006/EFC3/svm_decision_0.9.png> </home/carneirofc/IA006/EFC3/svm_decision_1.0.png> </home/carneirofc/IA006/EFC3/svm_decision_1.1.png> </home/carneirofc/IA006/EFC3/svm_decision_1.2.png> </home/carneirofc/IA006/EFC3/svm_decision_1.3.png> </home/carneirofc/IA006/EFC3/svm_decision_1.4.png> </home/carneirofc/IA006/EFC3/svm_decision_1.5.png> </home/carneirofc/IA006/EFC3/svm_decision_1.6.png> </home/carneirofc/IA006/EFC3/svm_decision_1.7.png> </home/carneirofc/IA006/EFC3/svm_decision_1.8.png> </home/carneirofc/IA006/EFC3/svm_decision_1.9.png> </home/carneirofc/IA006/EFC3/svm_decision_2.0.png>] (/home/carneirofc/IA006/EFC3/263796.aux) ) 
 Here is how much of TeX's memory you used:
- 4825 strings out of 492623
- 68191 string characters out of 6135669
- 150934 words of memory out of 5000000
- 8644 multiletter control sequences out of 15000+600000
- 11849 words of font info for 46 fonts, out of 8000000 for 9000
+ 4958 strings out of 492623
+ 71300 string characters out of 6135669
+ 151974 words of memory out of 5000000
+ 8752 multiletter control sequences out of 15000+600000
+ 12148 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,39p,301b,302s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on /home/carneirofc/IA006/EFC3/263796.pdf (5 pages, 1427247 bytes).
+ 41i,10n,39p,301b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on /home/carneirofc/IA006/EFC3/263796.pdf (8 pages, 1848502 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 134 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
