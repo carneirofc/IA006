@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1573342925 "/home/carneirofc/IA006/EFC3/263796.tex" "/home/carneirofc/IA006/EFC3/263796.pdf" "263796" 1573342989
-  "/home/carneirofc/IA006/EFC3/263796.aux" 1573342933 2536 24105ce2747ddf0d679240c37d08f35c ""
-  "/home/carneirofc/IA006/EFC3/263796.tex" 1573342989 12046 7448ec794714a718e444c2fe58c29610 ""
+["pdflatex"] 1573345839 "/home/carneirofc/IA006/EFC3/263796.tex" "/home/carneirofc/IA006/EFC3/263796.pdf" "263796" 1573345847
+  "/home/carneirofc/IA006/EFC3/263796.aux" 1573345847 2913 bdadcbdb738b8cc26b8a105499a67239 ""
+  "/home/carneirofc/IA006/EFC3/263796.tex" 1573345839 14613 f8eb5228027df1cedee46c3c43b14a78 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1557554374 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1557554374 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1557554374 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -88,11 +88,12 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1557554374 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1569158733 3106380 436fef8c2e0ca660ce1dd89198cfa583 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1569158718 7979416 2bd09187c8bff557c92cade1c9b71a32 ""
-  "263796.aux" 1573342933 2536 24105ce2747ddf0d679240c37d08f35c "pdflatex"
-  "263796.tex" 1573342989 12046 7448ec794714a718e444c2fe58c29610 ""
+  "263796.aux" 1573345847 2913 bdadcbdb738b8cc26b8a105499a67239 "pdflatex"
+  "263796.tex" 1573345839 14613 f8eb5228027df1cedee46c3c43b14a78 ""
   "mlp_inp_scaled.png" 1573340389 983926 6de42f5ca5cdb1a6d2491257d0c15478 ""
   "mlp_out_scaled.png" 1573340391 77564 7c7524d5779dae722175660333608732 ""
   "mlp_roc.png" 1573340457 261204 a68b2def64d2699fee94931a559ae2b7 ""
+  "mlp_roc_multi.png" 1573344272 539526 9d073515d42138b87e0fcc2187490574 ""
   "mlp_training.png" 1573325872 396623 fb08cce69ee0539e0b28911e1ac870ca ""
   "mpl_decision.png" 1573340450 5058 8bb5300e6bd07086f405f92bcebed29a ""
   "svm_decision.png" 1573334797 24533 7098b73de1ef1ea9376bf69d76a9e315 ""
@@ -122,6 +123,6 @@
   (generated)
   "/home/carneirofc/IA006/EFC3/263796.pdf"
   "/home/carneirofc/IA006/EFC3/263796.log"
-  "263796.aux"
   "263796.pdf"
+  "263796.aux"
   "263796.log"
